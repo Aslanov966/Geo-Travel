@@ -1,0 +1,83 @@
+<!-- <div data-aos="fade-up">
+        <div class="gallery">
+          <div class="swiper-container gallery-slider">
+            <div class="swiper-wrapper testSlider">
+              <div class="swiper-slide">
+                <div class="container">
+                  <div class="swiper-texts-wrapper">
+                    <p class="swiper-head-text">Azerbaijan</p>
+                    <p class="swiper-body-text">Baku</p>
+                    <button class="read-more-texts">read more</button>
+                  </div>
+                </div>
+                <img src="./Image/image 10 1.png" alt="" />
+              </div>
+              <div class="swiper-slide swiper-active">
+                <div class="container">
+                  <div class="swiper-texts-wrapper">
+                    <p class="swiper-head-text">Turkey</p>
+                    <p class="swiper-body-text">Izmir</p>
+                    <button class="read-more-texts">read more</button>
+                  </div>
+                </div>
+                <img src="./Image/izmir.jpg" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <div class="container">
+                  <div class="swiper-texts-wrapper">
+                    <p class="swiper-head-text">Turkey</p>
+                    <p class="swiper-body-text">Cappadocia</p>
+                    <button class="read-more-texts">read more</button>
+                  </div>
+                </div>
+                <img src="./Image/image 9 (2).jpg" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <div class="container">
+                  <div class="swiper-texts-wrapper">
+                    <p class="swiper-head-text">Turkey</p>
+                    <p class="swiper-body-text">Antalya</p>
+                    <button class="read-more-texts">read more</button>
+                  </div>
+                </div>
+                <img src="./Image/image 5.jpg" alt="" />
+              </div>
+
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+            <div class="swiper-container gallery-thumbs">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="thumbs-texts-wrapper">
+                    <p class="thumbs-head-text">Turkey</p>
+                    <p class="thumbs-body-text">Izmir</p>
+                  </div>
+                  <img src="./Image/izmir.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <div class="thumbs-texts-wrapper">
+                    <p class="thumbs-head-text">Turkey</p>
+                    <p class="thumbs-body-text">Cappadocia</p>
+                  </div>
+                  <img src="./Image/image 9 (2).jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <div class="thumbs-texts-wrapper">
+                    <p class="thumbs-head-text">Turkey</p>
+                    <p class="thumbs-body-text">Antalya</p>
+                  </div>
+                  <img src="./Image/image 5.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <div class="thumbs-texts-wrapper">
+                    <p class="thumbs-head-text">Azerbaijan</p>
+                    <p class="thumbs-body-text">Baku</p>
+                  </div>
+                  <img src="./Image/image 10 1.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->

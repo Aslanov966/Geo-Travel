@@ -1,0 +1,258 @@
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+.clearfix::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+
+/* ==== MANSHET PART START -------- */
+
+.manshet_appartment {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  margin: 0px auto 30px auto;
+}
+
+div.manshet-content {
+  display: flex;
+  position: absolute;
+  flex-wrap: wrap;
+  padding: 20px 20px 20px 20px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  align-items: flex-end;
+  justify-content: flex-end;
+  opacity: 1;
+}
+
+.apartm_info {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 20px;
+  margin: 0 0 0 10px;
+  text-align: left;
+  text-align: center;
+  font-family: 'Montserrat';
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0px;
+  color: #0E1013;
+  opacity: 1;
+  background-color: #FFFFFF;
+  border-radius: 4px;
+  opacity: 1;
+}
+
+.apartm_info::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 6px;
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.aprt_video_icon::before {
+  background-image: url("../img/foto_icon.svg");
+}
+
+.aprt_foto_icon::before {
+  background-image: url("../img/foto_icon.svg");
+}
+
+.aprt_plan_icon::before {
+  background-image: url("../img/foto_icon.svg");
+}
+
+.manshet_appartment .gallery-top {
+  display: block;
+  width: 100%;
+  margin: 0px auto;
+}
+
+.manshet_appartment .gallery-thumbs {
+  display: block;
+  width: 71%;
+  height: auto;
+  margin: 10px auto;
+  position: absolute;
+  right: 0;
+}
+
+.sld_img {
+  display: block;
+  position: relative;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.sld_img::before {
+  content: "";
+  display: block;
+  position: relative;
+  width: 100%;
+  padding-top: 56%;
+}
+
+.sld_img img,
+.sld_img video,
+.sld_img iframe {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.sld_thumb_img {
+  display: block;
+  position: relative;
+  width: 345px;
+  max-width: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.gallery-thumbs .swiper-slide:hover .sld_thumb_img {
+  border: 1px solid #2196f3;
+}
+
+.gallery-thumbs .swiper-slide:hover .sld_thumb_img img {
+  transform: scale(1.1);
+}
+
+.sld_thumb_img::before {
+  content: "";
+  display: block;
+  position: relative;
+  width: 100%;
+  padding-top: 134%;
+}
+
+.sld_thumb_img img,
+.sld_thumb_img video,
+.sld_thumb_img iframe {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.swiper-slide-thumb-active div.thumb-number {
+  color: #FFD32A;
+  border-bottom: 2px solid #FFD32A;
+}
+
+.thumb-number {
+  display: none;
+  width: 100%;
+  padding: 10px;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  text-align: left;
+  font: normal normal 600 12px/14px SanFrancisco-Regular;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  opacity: 1;
+}
+
+.manshet_appartment .swiper-button-next,
+.manshet_appartment .swiper-button-prev {
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px 20px;
+  border: 0;
+  outline: 0;
+  margin: 0;
+  bottom: 10px;
+  top: auto;
+  opacity: 1;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.manshet_appartment .swiper-button-next {
+  background-image: url("../img/next.svg");
+  right: 20px;
+}
+
+.manshet_appartment .swiper-button-prev {
+  background-image: url("../img/prev.svg");
+  left: auto;
+  right: 70px;
+}
+
+.manshet_appartment .swiper-slide.swiper-slide-visible.swiper-slide-active {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.manshet_appartment .swiper-slide.swiper-slide-prev {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.gallery-top .swiper-slide .sld_img {
+  transform: scale(0) !important;
+  -webkit-transform: scale(0) !important;
+  -moz-transform: scale(0) !important;
+  -ms-transform: scale(0) !important;
+  -o-transform: scale(0) !important;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+}
+
+.gallery-top .swiper-slide.swiper-slide-active .sld_img {
+  transform: scale(1) !important;
+  -webkit-transform: scale(1) !important;
+  -moz-transform: scale(1) !important;
+  -ms-transform: scale(1) !important;
+  -o-transform: scale(1) !important;
+}
+
+.gallery-top .swiper-slide.swiper-slide-prev .sld_img {
+  transform: scale(1) !important;
+  -webkit-transform: scale(1) !important;
+  -moz-transform: scale(1) !important;
+  -ms-transform: scale(1) !important;
+  -o-transform: scale(1) !important;
+}
+
+
+/* ==== MANSHET PART FINISH -------- */

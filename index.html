@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.3.2/swiper-bundle.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="Css/geotravel.css" />
+    <link rel="stylesheet" href="Css/responsive.css" />
+    <link
+      rel="shortcut icon"
+      href="https://geo-mice.az/front/img/geo_travel.svg"
+      type="image/x-icon"
+    />
+    <title>Geo Travel</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <div class="travel-header-logo">
+            <a href="">
+              <svg
+                width="215"
+                height="101"
+                viewBox="0 0 215 101"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0_127_14)">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M84.501 25.9094H114.562L119.138 35.6836L117.56 36.4205C113.851 32.6194 111.8 30.5637 111.406 30.2922C109.591 29.1286 106.751 28.5081 102.845 28.5081H96.5725V42.6651H101.543C103.634 42.6651 105.212 42.1221 106.198 40.9973C106.948 40.1828 107.658 38.6701 108.328 36.4981H110.262V51.3921H108.131C107.776 49.22 107.263 47.7462 106.632 46.9316C105.725 45.8068 104.305 45.225 102.293 45.225H96.5725V55.8137C96.5725 57.7143 97.2037 59.033 98.5056 59.6924C99.4129 60.1578 100.912 60.4293 103.042 60.4293C106.593 60.4293 109.078 60.2354 110.498 59.8475C111.918 59.4209 113.22 58.5676 114.404 57.2488C115.903 55.3483 117.402 53.4478 118.901 51.5472L120.518 52.1678C118.704 56.8998 117.52 60.5069 116.928 62.9892H84.5799V60.7784C86.5524 60.4681 87.8542 60.0027 88.5248 59.4209C89.3533 58.7227 89.7872 57.4428 89.7872 55.6586V32.154C89.7872 29.788 88.012 28.4305 84.501 28.1202V25.9094Z"
+                    fill="white"
+                  ></path>
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M82.5284 70.5138L100.715 70.475C101.346 72.5307 101.938 74.1985 102.529 75.4397L101.543 75.8276C100.793 74.9743 100.083 74.121 99.3339 73.2677C98.7421 72.6471 98.0715 72.2204 97.3614 71.9877C96.5724 71.7938 95.2706 71.6774 93.4953 71.6774V85.0975C93.4953 85.8345 93.8898 86.3387 94.5999 86.6102C94.8366 86.6878 95.5862 86.8429 96.8485 87.0369V88.2005C94.8761 88.1229 92.8641 88.0841 90.8522 88.0841C89.8265 88.0841 88.288 88.1229 86.2761 88.2005V87.0369C87.6174 86.9981 88.4852 86.8429 88.9586 86.5714C89.5504 86.2223 89.8265 85.5242 89.8265 84.477V71.7162H88.7219C87.3807 71.7162 86.3155 71.8714 85.5265 72.2204C84.8953 72.4919 84.2641 72.9574 83.6724 73.6167C83.0412 74.3537 82.4495 75.0906 81.8183 75.8276L80.832 75.4009C81.3054 74.3537 81.8577 72.6859 82.5284 70.5138ZM104.581 87.0369L104.541 87.0757C105.764 86.9593 106.593 86.7654 107.027 86.3775C107.46 86.0284 107.658 85.3303 107.658 84.3606V75.3233C107.658 73.8107 107.579 72.9186 107.421 72.6859C107.105 72.0265 106.159 71.6774 104.66 71.6386V70.475C106.474 70.5138 107.816 70.5526 108.683 70.5526C109.236 70.5526 110.064 70.5526 111.169 70.5138C112.313 70.5138 113.141 70.475 113.733 70.475C119.729 70.475 122.688 71.8714 122.688 74.664C122.688 75.9827 122.293 77.03 121.544 77.7669C121.071 78.2323 120.005 78.8917 118.349 79.7838L124.227 85.7957C125.016 86.5714 126.002 86.9981 127.185 87.0757L127.146 88.1617C126.593 88.1617 125.726 88.1617 124.582 88.1617C123.911 88.1617 122.925 88.1617 121.583 88.1617C119.769 86.0672 117.283 83.4297 114.167 80.2104H111.287V84.6321C111.287 85.6018 111.524 86.2611 112.037 86.5714C112.431 86.8429 113.22 87.0369 114.404 87.0757V88.1229L109.315 87.9677C108.052 87.9677 106.474 88.0065 104.581 88.1229V87.0369ZM112.707 79.0468H113.97C115.271 79.0468 116.416 78.6978 117.362 77.9608C118.27 77.2627 118.743 76.3706 118.743 75.2846C118.743 72.8798 117.126 71.6386 113.891 71.6386H111.879C111.8 71.6386 111.721 71.6386 111.603 71.6386C111.484 71.6386 111.405 71.6386 111.327 71.6386V78.9693C111.484 78.9693 111.721 78.9693 112.037 78.9693C112.313 79.0469 112.549 79.0468 112.707 79.0468ZM127.58 86.9981C128.882 86.8817 129.789 86.5326 130.341 85.9896C130.617 85.7181 131.051 84.9424 131.604 83.6624C132.55 81.6843 133.931 78.6978 135.746 74.7028C136.614 72.6859 137.087 71.3671 137.166 70.7078C138.073 70.5138 139.375 70.0484 140.993 69.3114C141.821 71.8326 143.162 75.3621 145.095 79.9002C145.529 81.025 146.2 82.654 147.147 84.8648C147.462 85.6018 147.817 86.106 148.291 86.3775C148.646 86.5714 149.356 86.8041 150.342 86.9593V88.1229C148.172 88.0453 147.107 88.0065 147.107 88.0065H143.951C143.557 88.0065 143.044 88.0065 142.413 88.0453C141.624 88.0841 141.071 88.1229 140.874 88.1229V86.9593C142.531 86.8817 143.36 86.4163 143.36 85.4854C143.36 84.9812 143.162 84.2442 142.728 83.2746C142.373 82.5376 142.058 81.8007 141.742 81.0637H134.405C134.049 81.8007 133.734 82.5376 133.418 83.2746C132.984 84.2442 132.787 84.9812 132.787 85.4854C132.787 86.0284 133.142 86.4163 133.813 86.649C134.089 86.7266 134.72 86.8429 135.667 86.9981V88.0453C133.616 88.0453 132.077 88.0453 131.051 88.0453C129.907 88.0453 128.803 88.0841 127.698 88.1617V86.9981H127.58ZM141.308 79.8614C139.927 76.5257 138.862 74.0434 138.113 72.3756L134.917 79.8614H141.308ZM147.462 70.3975L147.502 70.3587C149.356 70.4362 151.052 70.475 152.551 70.5138C153.301 70.5138 155.037 70.5138 157.68 70.4363V71.5611C155.983 71.6386 155.155 72.1816 155.155 73.1125C155.155 73.6943 155.786 75.4785 157.127 78.4263C157.995 80.3268 158.863 82.2273 159.731 84.1279C160.638 82.2273 161.585 80.3268 162.532 78.4263C163.913 75.5561 164.583 73.7719 164.583 73.0737C164.583 72.4531 164.307 72.0653 163.716 71.8326C163.045 71.755 162.571 71.6774 162.256 71.6386V70.3587C163.518 70.475 164.781 70.5138 166.082 70.5138C166.99 70.5138 168.331 70.5138 170.146 70.4363V71.6386C169.081 71.6774 168.292 71.8714 167.818 72.1429C167.424 72.4144 166.99 72.9574 166.516 73.8495L158.824 88.5107H157.877L150.697 73.3064C150.382 72.6471 149.987 72.1816 149.474 71.9877C149.08 71.8326 148.449 71.7162 147.462 71.6386V70.3975ZM172.197 70.5138H189.121L191.685 75.1294L190.778 75.4785C188.687 73.6943 187.543 72.7247 187.306 72.5695C186.32 72.0265 184.703 71.7162 182.533 71.7162H179.022V78.4263H181.823C183.006 78.4263 183.874 78.1548 184.466 77.6505C184.86 77.2627 185.294 76.5257 185.649 75.5173H186.715V82.5764H185.492C185.294 81.568 185.018 80.8698 184.663 80.4432C184.19 79.9002 183.361 79.6286 182.217 79.6286H178.982V84.6709C178.982 85.563 179.338 86.1836 180.048 86.4939C180.56 86.7266 181.389 86.8429 182.612 86.8429C184.584 86.8429 186.005 86.7654 186.793 86.5714C187.622 86.3775 188.332 85.9508 189.003 85.3303C189.871 84.4382 190.699 83.5461 191.527 82.6152L192.435 82.8867C191.409 85.1363 190.738 86.8429 190.423 88.0065H172.237V86.9593C173.341 86.8041 174.091 86.6102 174.446 86.3387C174.919 85.9896 175.156 85.4078 175.156 84.5545V73.384C175.156 72.2592 174.17 71.6386 172.197 71.4835V70.5138ZM194.723 87.0369C196.735 86.8429 197.76 86.2223 197.76 85.1751V73.6943C197.76 72.3368 196.735 71.6386 194.723 71.6386V70.475C196.774 70.5138 198.313 70.5526 199.338 70.5526C200.561 70.5526 202.416 70.5138 204.901 70.475V71.6386C203.638 71.6774 202.81 71.7938 202.376 71.9877C201.784 72.298 201.508 72.9574 201.508 73.927V84.7873C201.508 85.2915 201.666 85.7569 202.06 86.1448C202.416 86.5714 202.889 86.7654 203.481 86.7654H208.017C210.227 86.7654 212.12 85.1751 213.816 82.0334L215.039 82.3825C214.132 84.5157 213.422 86.4163 212.988 88.0841H194.762V87.0369H194.723Z"
+                    fill="white"
+                  ></path>
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M75.4275 23.97L75.8615 47.3195L73.1789 47.6298C71.4037 41.0361 67.9321 35.4508 62.7248 30.9128C57.2807 26.1421 51.1661 23.7761 44.4596 23.7761C35.0312 23.7761 27.4174 27.422 21.6972 34.7527C16.4505 41.424 13.8468 49.5303 13.8468 59.1494C13.8468 69.6217 16.056 78.3099 20.5138 85.1363C25.8 93.2815 33.4532 97.3541 43.5523 97.2765C45.9982 97.2765 48.4835 96.9274 50.9294 96.1905C55.7422 94.7942 58.8982 92.9324 60.4761 90.644C61.9752 88.5495 62.6853 85.02 62.6853 80.0553C62.6853 74.8579 61.9358 71.7162 60.3973 70.6302C59.7661 70.1647 56.5706 69.4278 50.811 68.3806L50.6532 64.9674C57.5569 65.1613 67.8927 65.2777 81.6606 65.2777L81.5422 68.6909H80.5165C75.9404 68.6909 73.6523 71.8326 73.6523 78.0772V91.6912C63.5532 97.8583 52.7046 100.961 41.1459 100.961C29.6661 100.961 19.922 96.8886 11.9927 88.7823C3.9844 80.6759 0 70.9405 0 59.576C0 48.677 4.18165 39.2907 12.5844 31.4558C20.8294 23.7761 30.5734 19.9362 41.7376 19.9362C51.3239 19.9362 61.1073 22.7289 71.0092 28.3529L75.4275 23.97Z"
+                    fill="white"
+                  ></path>
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M145.766 2.48233C138.349 5.89555 137.008 15.3982 136.969 20.518L150.894 14.6613L145.805 2.40476C161.822 -4.34409 180.639 3.68471 187.504 20.2078C194.407 36.692 186.872 55.8137 170.856 62.5626L166.082 51.0818L152.393 56.8222C157.64 61.5541 163.794 64.6571 169.83 62.9505C162.611 65.0449 156.378 62.3299 150.5 57.7919L141.703 60.0415L148.567 56.0465C143.912 51.5472 141.86 48.3667 138.507 41.6567L129.394 44.2942L137.837 39.9113C135.864 34.9078 134.681 28.3917 134.72 23.7373C132.116 24.2028 128.369 25.9094 125.726 26.3748C128.29 24.707 132.235 23.078 134.799 21.3714C135.47 12.6832 139.217 5.27496 145.766 2.48233ZM151.841 16.9109L136.969 23.1555C137.166 28.8571 138.862 34.52 140.519 38.9416L157.995 31.6498L151.841 16.9109ZM158.705 33.5115L141.308 40.8034C144.306 47.591 147.462 51.7024 150.658 55.1156L165.175 49.0261L158.705 33.5115ZM146.16 2.2884C153.695 -0.310292 161.112 5.23617 164.741 8.80453L150.894 14.6225L150.776 14.7389L151.683 16.9497L166.556 10.6663C170.461 14.8164 173.262 20.0138 175.235 24.3191L157.916 31.6498L157.956 31.7273H157.798L158.548 33.5115L175.945 26.1421C178.667 33.1237 179.456 38.2823 179.614 43.0142L164.978 49.1813L165.885 51.1982L166.082 51.1206V51.1594L179.614 45.4578C179.259 52.4005 177.207 58.8779 171.881 62.1359L171.921 62.0972C178.272 58.3737 180.679 51.9739 181.626 44.7208L188.845 41.6567C189.121 40.7258 189.318 39.7949 189.476 38.8641L181.783 42.1221C181.783 35.606 180.994 32.154 178.627 25.0173L187.819 21.1386C187.701 20.8283 187.582 20.518 187.464 20.2078C187.306 19.8587 187.148 19.5096 186.991 19.1605L177.838 23.0392C175.629 18.0357 171.921 12.722 168.607 9.4639L176.379 6.16705C175.708 5.66283 174.998 5.19739 174.288 4.77074L166.871 7.87366C160.402 2.32719 152.867 -0.155146 146.437 2.13326C146.358 2.21083 146.239 2.24962 146.16 2.2884ZM158.271 0C176.576 0 191.409 14.5837 191.409 32.5806C191.409 50.5776 176.576 65.1613 158.271 65.1613C139.967 65.1613 125.134 50.5776 125.134 32.5806C125.134 14.5837 140.006 0 158.271 0Z"
+                    fill="white"
+                  ></path>
+                </g>
+                <defs>
+                  <clipPath id="clip0_127_14">
+                    <rect width="215" height="101" fill="white"></rect>
+                  </clipPath>
+                </defs>
+              </svg>
+            </a>
+          </div>
+          <ul>
+            <li class="language-page" id="language-page">
+              <a href="">
+                <i class="solid-icon fa-solid fa-globe" id="solid-icon"></i>
+                <ul class="language-page-txts" id="language-page-txts">
+                  <li class="languages" id="languages">
+                    <a class="active">EN</a>
+                    <a>DE</a>
+                    <a>RU</a>
+                  </li>
+                </ul>
+              </a>
+            </li>
+            <div id="menu-icons" class="menu-icons" onclick="OpenMenuBars()">
+              <li class="menu-items" id="menu-items">
+                <div class="bars">
+                  <div class="bar1" id="bar1"></div>
+                  <div class="bar2"></div>
+                  <div class="bar3" id="bar3"></div>
+                </div>
+              </li>
+              <li class="menu-text" id="menu-text">
+                <a>MENU</a>
+              </li>
+            </div>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="menu-bars" id="menu-bars">
+      <div class="container">
+        <div class="menu-bar-left" id="menu-bar-left">
+          <ul class="language-menu-bar">
+            <li>
+              <a href="">EN</a>
+            </li>
+            <li>
+              <a href="">DE</a>
+            </li>
+            <li>
+              <a href="">RU</a>
+            </li>
+          </ul>
+          <ul class="menu-bar-first" onclick="OpenMenuBars()">
+            <li>
+              <a href="" class="active">Home Page</a>
+            </li>
+            <li>
+              <a href="">Destinations</a>
+            </li>
+            <li>
+              <a href="#contact-us">Contact Us</a>
+            </li>
+          </ul>
+          <div class="menu-left-second">
+            <ul>
+              <li>
+                <a href="">+994 51 877 80 00</a>
+              </li>
+              <li>
+                <a href=""> +994 12 408 74 78</a>
+              </li>
+              <li>
+                <a href="">info@geo-mice.az</a>
+              </li>
+            </ul>
+            <div class="address-second-left-menu">
+              <p class="address-second-head">Address</p>
+              <p class="address-second-body">
+                1A Yusif Safarov str., Baku, AZ 1025,Azerbaijan
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="menu-bar-right" id="menu-bar-right">
+        <ul class="contact-bar-right">
+          <li>
+            <a href="">+994 51 877 80 00</a>
+          </li>
+          <li>
+            <a href="">+994 12 408 74 78</a>
+          </li>
+          <li>
+            <a href="">info@geo-mice.az</a>
+          </li>
+        </ul>
+        <div class="address-bar-right">
+          <p class="address-bar-right-head">Address</p>
+          <p class="address-bar-right-body">
+            1A Yusif Safarov str., Baku, AZ 1025, Azerbaijan
+          </p>
+        </div>
+        <div class="menu-bar-right-social-icons">
+          <a>
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+          <a>
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a>
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="fixed-icons">
+      <ul>
+        <li class="whatsApp_button">
+          <a href="#home-section">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+        </li>
+        <li class="phone_button">
+          <a href="">
+            <i class="fa-solid fa-phone"></i>
+          </a>
+        </li>
+        <li class="up-header up_button" id="up-header">
+          <a href="">
+            <i class="fa-solid fa-angle-up"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <section class="home-section" id="home-section">
+      <div class="home-image">
+        <img src="./Image/geo-travel-nature.jpg" alt="" />
+        <div class="container">
+          <div class="sections">
+            <div class="section1">
+              <p>
+                Our goal is to ensure that you experience your theme <br />
+                in the best way and <br />
+                get maximum comfort and satisfaction, in your accommodations.
+              </p>
+              <a href="#about-section">
+                <i class="fa-solid fa-arrow-down"></i>
+              </a>
+            </div>
+            <div class="section2">
+              <a>
+                <h1>
+                  BACK TO <br />
+                  NATURE
+                </h1>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="about-section" id="about-section">
+      <div class="container">
+        <div class="about-container">
+          <div class="about-img">
+            <div data-aos="fade-up">
+              <img src="./Image/about-img.png" alt="" />
+            </div>
+          </div>
+          <div class="about-txts">
+            <div data-aos="fade-up">
+              <p class="about-head">ABOUT US</p>
+              <p class="about-body">
+                Geo Travel – is stable,progressively developing company.Our team
+                consists of qualified advisers and managers having considerable
+                experience of work. Company Geo Travel is founded by
+                professionals, people who have devoted their life to tourism.
+                Having a wide experience, Geo Travel manages tours in 45
+                countries of the world, realizes exclusive programs: training
+                and medical treatment abroad, exclusive participation in
+                cultural and entertainment actions, organization of business
+                trips and business seminars for experts of various branches.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="discover-section">
+      <div class="container">
+        <div class="discovers">
+          <div class="discover-texts" data-aos="fade-up">
+            <p class="discover-head">
+              DISCOVER A DESTINATION WITH A STORY TO TELL FROM INTRIGUING CITIES
+              TO HIGH PASSES
+            </p>
+            <p class="discover-body">
+              At will of the customer Geo Travel can reserve any of thousand of
+              the best hotels of the world, charter the yacht or private plane,
+              rent prestigious limousine, comfortable country house, or ancient
+              castle. Geo Travel is a member of JATA (the Japanese Association
+              of Travel Agents) and IATA (International Air Transport
+              Asotiation). For FIT tourists: Specializing on organization of
+              individual tours, we offer the travelers new possibility – not to
+              bind themselves with frameworks of a group trip, but to create and
+              plan your own rest with comfortable conditions suitable for them.
+              Intimate knowledge of features of each country, received by
+              managers during training and seminars, guarantees clients of Geo
+              Travel high level of service.
+            </p>
+          </div>
+          <div class="discover-img" data-aos="fade-up">
+            <img src="./Image/discover-img.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="container" data-aos="fade-up">
+      <div class="destination-text-head" data-aos="fade-up">
+        <p class="destination-head">EXPLORE OUR TOP DESTINATIONS</p>
+      </div>
+    </div>
+    <div class="manshet_appartment" data-aos="fade-up">
+      <div class="swiper-container gallery-top">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="container">
+              <div class="swiper-texts-wrapper">
+                <p class="swiper-head-text">Azerbaijan</p>
+                <p class="swiper-body-text">Baku</p>
+                <button class="read-more-texts">read more</button>
+              </div>
+            </div>
+            <div class="sld_img">
+              <img src="./Image/image 10 1.png" alt="" class="thumb_img" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="container">
+              <div class="swiper-texts-wrapper">
+                <p class="swiper-head-text">Turkey</p>
+                <p class="swiper-body-text">Izmir</p>
+                <button class="read-more-texts">read more</button>
+              </div>
+            </div>
+            <div class="sld_img">
+              <img src="./Image/izmir.jpg" alt="" class="thumb_img" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="container">
+              <div class="swiper-texts-wrapper">
+                <p class="swiper-head-text">Turkey</p>
+                <p class="swiper-body-text">Cappadocia</p>
+                <button class="read-more-texts">read more</button>
+              </div>
+            </div>
+            <div class="sld_img">
+              <img src="./Image/image 9 (2).jpg" alt="" class="thumb_img" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="container">
+              <div class="swiper-texts-wrapper">
+                <p class="swiper-head-text">Turkey</p>
+                <p class="swiper-body-text">Antalya</p>
+                <button class="read-more-texts">read more</button>
+              </div>
+            </div>
+            <div class="sld_img">
+              <img src="./Image/image 5.jpg" alt="" class="thumb_img" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="container">
+              <div class="swiper-texts-wrapper">
+                <p class="swiper-head-text">Azerbaijan</p>
+                <p class="swiper-body-text">Baku</p>
+                <button class="read-more-texts">read more</button>
+              </div>
+            </div>
+            <div class="sld_img">
+              <img src="./Image/image 10 1.png" alt="" class="thumb_img" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="container">
+              <div class="swiper-texts-wrapper">
+                <p class="swiper-head-text">Turkey</p>
+                <p class="swiper-body-text">Izmir</p>
+                <button class="read-more-texts">read more</button>
+              </div>
+            </div>
+            <div class="sld_img">
+              <img src="./Image/izmir.jpg" alt="" class="thumb_img" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="container">
+              <div class="swiper-texts-wrapper">
+                <p class="swiper-head-text">Turkey</p>
+                <p class="swiper-body-text">Cappadocia</p>
+                <button class="read-more-texts">read more</button>
+              </div>
+            </div>
+            <div class="sld_img">
+              <img src="./Image/image 9 (2).jpg" alt="" class="thumb_img" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="container">
+              <div class="swiper-texts-wrapper">
+                <p class="swiper-head-text">Turkey</p>
+                <p class="swiper-body-text">Antalya</p>
+                <button class="read-more-texts">read more</button>
+              </div>
+            </div>
+            <div class="sld_img">
+              <img src="./Image/image 5.jpg" alt="" class="thumb_img" />
+            </div>
+          </div>
+        </div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next swiper-button-white"></div>
+        <div class="swiper-button-prev swiper-button-white"></div>
+      </div>
+      <div class="swiper-container gallery-thumbs">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="thumbs-texts-wrapper">
+              <p class="thumbs-head-text">Azerbaijan</p>
+              <p class="thumbs-body-text">Baku</p>
+            </div>
+            <div class="sld_thumb_img">
+              <img src="./Image/image 10 1.png" alt="" class="thumb_img" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="thumbs-texts-wrapper">
+              <p class="thumbs-head-text">Turkey</p>
+              <p class="thumbs-body-text">Izmir</p>
+            </div>
+            <div class="sld_thumb_img">
+              <img src="./Image/izmir.jpg" alt="" class="thumb_img" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="thumbs-texts-wrapper">
+              <p class="thumbs-head-text">Turkey</p>
+              <p class="thumbs-body-text">Cappadocia</p>
+            </div>
+            <div class="sld_thumb_img">
+              <img src="./Image/image 9 (2).jpg" alt="" class="thumb_img" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="thumbs-texts-wrapper">
+              <p class="thumbs-head-text">Turkey</p>
+              <p class="thumbs-body-text">Antalya</p>
+            </div>
+            <div class="sld_thumb_img">
+              <img src="./Image/image 5.jpg" alt="" class="thumb_img" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="destinations">
+      <div data-aos="fade-up">
+        <div class="gallery">
+          <div class="swiper-container gallery-slider">
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="why-sections">
+      <div class="container">
+        <div class="why-head-div" data-aos="fade-up">
+          <p class="why-head-text">WHY US?</p>
+        </div>
+        <div class="why-all" data-aos="fade-up">
+          <div class="experience">
+            <div class="why-logo">
+              <div class="blur-effect"></div>
+              <img src="./Image/experience.png" alt="" />
+            </div>
+            <div class="experiencte-texts">
+              <p class="why-head">Experience</p>
+              <p class="why-body">More than 12 years of experience as a DMC.</p>
+            </div>
+          </div>
+          <div class="service">
+            <div class="why-logo">
+              <div class="blur-effect"></div>
+              <img src="./Image/service.png" alt="" />
+            </div>
+            <div class="service-texts">
+              <p class="why-head">Service</p>
+              <p class="why-body">
+                More 5 thousand travelers use our services annually.
+              </p>
+            </div>
+          </div>
+          <div class="transfer">
+            <div class="why-logo">
+              <div class="blur-effect"></div>
+              <img src="./Image/transfer.png" alt="" />
+            </div>
+            <div class="transfer-texts">
+              <p class="why-head">Transfer</p>
+              <p class="why-body">
+                Own transport, drivers, guides in staff and restaurant in use.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="reference">
+      <div class="container">
+        <div class="reference-head" data-aos="fade-up">
+          <p class="reference-head-text">Reference</p>
+        </div>
+        <div class="reference-body" data-aos="fade-up">
+          <div class="reference-swiper swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="referance-logo">
+                  <img src="./Image/logo-barrier.png" alt="" />
+                </div>
+                <div class="referance-texts">
+                  <p class="referance-bodys">
+                    Thank you for your work Thanks to your efforts, we held a
+                    wonderful event in Baku, for us it was the first experience
+                    of a project in your direction. Looking forward to future
+                    projects BWT Barrier incentive in Azerbaijan.
+                  </p>
+                  <p class="referance-heads">Bwt Barrier</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="referance-logo">
+                  <img src="./Image/logo-cleanmax.png" alt="" />
+                </div>
+                <div class="referance-texts">
+                  <p class="referance-bodys">
+                    We would like to thank you for your work, It was one of the
+                    most memorable projects, despite the large number of changes
+                    and at the last moment you managed at a high level and we
+                    are very pleased that you have chosen your company to host
+                    our conference in Baku. Cleanmax Aura Conference.
+                  </p>
+                  <p class="referance-heads">Cleanmax Aura</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="referance-logo">
+                  <img src="./Image/logo-midea.jpg" alt="" />
+                </div>
+                <div class="referance-texts">
+                  <p class="referance-bodys">
+                    I would like to thank you very much for the preparation and
+                    holding of our event. You are a responsible company,
+                    attentive to details and partners.It was a pleasure to work
+                    with you. I hope this is not the last event in the team with
+                    you! Midea conference in Azerbaijan.
+                  </p>
+                  <p class="referance-heads">Midea</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="referance-logo">
+                  <img src="./Image/logo-servier.png" alt="" />
+                </div>
+                <div class="referance-texts">
+                  <p class="referance-bodys">
+                    Thank you for your help in preparing this conference, it was
+                    very comfortable to prepare this project with you .Your
+                    efficiency was at a very high level, and we also fell in
+                    love with your direction. Can't wait for more new
+                    projects.Incentive of Servier in Azerbaijan.
+                  </p>
+                  <p class="referance-heads">Servier</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="referance-logo">
+                  <img src="./Image/logo-knauf.png" alt="" />
+                </div>
+                <div class="referance-texts">
+                  <p class="referance-bodys">
+                    Colleagues, overall feedback on the project - it was a super
+                    conference. A balanced program (working part and
+                    activities), delicious cuisine, beautiful places, the hotel
+                    was also excellent. Thank you for working together , we
+                    listened and heard each other when preparing the project and
+                    here it is excellent result.Knauf conference in Azerbaijan.
+                  </p>
+                  <p class="referance-heads">Knauf</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="referance-logo">
+                  <img src="./Image/logo-barrier.png" alt="" />
+                </div>
+                <div class="referance-texts">
+                  <p class="referance-bodys">
+                    Thank you for your work Thanks to your efforts, we held a
+                    wonderful event in Baku, for us it was the first experience
+                    of a project in your direction. Looking forward to future
+                    projects BWT Barrier incentive in Azerbaijan.
+                  </p>
+                  <p class="referance-heads">Bwt Barrier</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="referance-logo">
+                  <img src="./Image/logo-cleanmax.png" alt="" />
+                </div>
+                <div class="referance-texts">
+                  <p class="referance-bodys">
+                    We would like to thank you for your work, It was one of the
+                    most memorable projects, despite the large number of changes
+                    and at the last moment you managed at a high level and we
+                    are very pleased that you have chosen your company to host
+                    our conference in Baku. Cleanmax Aura Conference.
+                  </p>
+                  <p class="referance-heads">Cleanmax Aura</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="referance-logo">
+                  <img src="./Image/logo-midea.jpg" alt="" />
+                </div>
+                <div class="referance-texts">
+                  <p class="referance-bodys">
+                    I would like to thank you very much for the preparation and
+                    holding of our event. You are a responsible company,
+                    attentive to details and partners.It was a pleasure to work
+                    with you. I hope this is not the last event in the team with
+                    you! Midea conference in Azerbaijan.
+                  </p>
+                  <p class="referance-heads">Midea</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="referance-logo">
+                  <img src="./Image/logo-servier.png" alt="" />
+                </div>
+                <div class="referance-texts">
+                  <p class="referance-bodys">
+                    Thank you for your help in preparing this conference, it was
+                    very comfortable to prepare this project with you .Your
+                    efficiency was at a very high level, and we also fell in
+                    love with your direction. Can't wait for more new
+                    projects.Incentive of Servier in Azerbaijan.
+                  </p>
+                  <p class="referance-heads">Servier</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="referance-logo">
+                  <img src="./Image/logo-knauf.png" alt="" />
+                </div>
+                <div class="referance-texts">
+                  <p class="referance-bodys">
+                    Colleagues, overall feedback on the project - it was a super
+                    conference. A balanced program (working part and
+                    activities), delicious cuisine, beautiful places, the hotel
+                    was also excellent. Thank you for working together , we
+                    listened and heard each other when preparing the project and
+                    here it is excellent result.Knauf conference in Azerbaijan.
+                  </p>
+                  <p class="referance-heads">Knauf</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-us" id="contact-us">
+      <div class="contact-menu">
+        <div data-aos="fade-up" class="contact-texts">
+          <p class="contact-head">Contact Us</p>
+          <p class="contact-body">
+            Fill out the form and start exploring all the corners of the world
+            together with us.
+          </p>
+        </div>
+        <div data-aos="fade-up" class="contact-form">
+          <form action="">
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="  Name,Surname*"
+            />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="   E-Mail*"
+            />
+            <textarea
+              name="Message"
+              id=""
+              cols="46"
+              rows="5"
+              class="text-area"
+              placeholder="  Message*"
+            ></textarea>
+            <input type="submit" class="send-button" value="Send" id="send" />
+          </form>
+        </div>
+      </div>
+
+      <div class="contact-img" data-aos="fade-up">
+        <img src="./Image/contact-img.png" alt="" class="core-img" />
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <div class="footer">
+          <div class="left-menu">
+            <svg
+              width="215"
+              height="101"
+              viewBox="0 0 215 101"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_127_14)">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M84.501 25.9094H114.562L119.138 35.6836L117.56 36.4205C113.851 32.6194 111.8 30.5637 111.406 30.2922C109.591 29.1286 106.751 28.5081 102.845 28.5081H96.5725V42.6651H101.543C103.634 42.6651 105.212 42.1221 106.198 40.9973C106.948 40.1828 107.658 38.6701 108.328 36.4981H110.262V51.3921H108.131C107.776 49.22 107.263 47.7462 106.632 46.9316C105.725 45.8068 104.305 45.225 102.293 45.225H96.5725V55.8137C96.5725 57.7143 97.2037 59.033 98.5056 59.6924C99.4129 60.1578 100.912 60.4293 103.042 60.4293C106.593 60.4293 109.078 60.2354 110.498 59.8475C111.918 59.4209 113.22 58.5676 114.404 57.2488C115.903 55.3483 117.402 53.4478 118.901 51.5472L120.518 52.1678C118.704 56.8998 117.52 60.5069 116.928 62.9892H84.5799V60.7784C86.5524 60.4681 87.8542 60.0027 88.5248 59.4209C89.3533 58.7227 89.7872 57.4428 89.7872 55.6586V32.154C89.7872 29.788 88.012 28.4305 84.501 28.1202V25.9094Z"
+                  fill="white"
+                ></path>
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M82.5284 70.5138L100.715 70.475C101.346 72.5307 101.938 74.1985 102.529 75.4397L101.543 75.8276C100.793 74.9743 100.083 74.121 99.3339 73.2677C98.7421 72.6471 98.0715 72.2204 97.3614 71.9877C96.5724 71.7938 95.2706 71.6774 93.4953 71.6774V85.0975C93.4953 85.8345 93.8898 86.3387 94.5999 86.6102C94.8366 86.6878 95.5862 86.8429 96.8485 87.0369V88.2005C94.8761 88.1229 92.8641 88.0841 90.8522 88.0841C89.8265 88.0841 88.288 88.1229 86.2761 88.2005V87.0369C87.6174 86.9981 88.4852 86.8429 88.9586 86.5714C89.5504 86.2223 89.8265 85.5242 89.8265 84.477V71.7162H88.7219C87.3807 71.7162 86.3155 71.8714 85.5265 72.2204C84.8953 72.4919 84.2641 72.9574 83.6724 73.6167C83.0412 74.3537 82.4495 75.0906 81.8183 75.8276L80.832 75.4009C81.3054 74.3537 81.8577 72.6859 82.5284 70.5138ZM104.581 87.0369L104.541 87.0757C105.764 86.9593 106.593 86.7654 107.027 86.3775C107.46 86.0284 107.658 85.3303 107.658 84.3606V75.3233C107.658 73.8107 107.579 72.9186 107.421 72.6859C107.105 72.0265 106.159 71.6774 104.66 71.6386V70.475C106.474 70.5138 107.816 70.5526 108.683 70.5526C109.236 70.5526 110.064 70.5526 111.169 70.5138C112.313 70.5138 113.141 70.475 113.733 70.475C119.729 70.475 122.688 71.8714 122.688 74.664C122.688 75.9827 122.293 77.03 121.544 77.7669C121.071 78.2323 120.005 78.8917 118.349 79.7838L124.227 85.7957C125.016 86.5714 126.002 86.9981 127.185 87.0757L127.146 88.1617C126.593 88.1617 125.726 88.1617 124.582 88.1617C123.911 88.1617 122.925 88.1617 121.583 88.1617C119.769 86.0672 117.283 83.4297 114.167 80.2104H111.287V84.6321C111.287 85.6018 111.524 86.2611 112.037 86.5714C112.431 86.8429 113.22 87.0369 114.404 87.0757V88.1229L109.315 87.9677C108.052 87.9677 106.474 88.0065 104.581 88.1229V87.0369ZM112.707 79.0468H113.97C115.271 79.0468 116.416 78.6978 117.362 77.9608C118.27 77.2627 118.743 76.3706 118.743 75.2846C118.743 72.8798 117.126 71.6386 113.891 71.6386H111.879C111.8 71.6386 111.721 71.6386 111.603 71.6386C111.484 71.6386 111.405 71.6386 111.327 71.6386V78.9693C111.484 78.9693 111.721 78.9693 112.037 78.9693C112.313 79.0469 112.549 79.0468 112.707 79.0468ZM127.58 86.9981C128.882 86.8817 129.789 86.5326 130.341 85.9896C130.617 85.7181 131.051 84.9424 131.604 83.6624C132.55 81.6843 133.931 78.6978 135.746 74.7028C136.614 72.6859 137.087 71.3671 137.166 70.7078C138.073 70.5138 139.375 70.0484 140.993 69.3114C141.821 71.8326 143.162 75.3621 145.095 79.9002C145.529 81.025 146.2 82.654 147.147 84.8648C147.462 85.6018 147.817 86.106 148.291 86.3775C148.646 86.5714 149.356 86.8041 150.342 86.9593V88.1229C148.172 88.0453 147.107 88.0065 147.107 88.0065H143.951C143.557 88.0065 143.044 88.0065 142.413 88.0453C141.624 88.0841 141.071 88.1229 140.874 88.1229V86.9593C142.531 86.8817 143.36 86.4163 143.36 85.4854C143.36 84.9812 143.162 84.2442 142.728 83.2746C142.373 82.5376 142.058 81.8007 141.742 81.0637H134.405C134.049 81.8007 133.734 82.5376 133.418 83.2746C132.984 84.2442 132.787 84.9812 132.787 85.4854C132.787 86.0284 133.142 86.4163 133.813 86.649C134.089 86.7266 134.72 86.8429 135.667 86.9981V88.0453C133.616 88.0453 132.077 88.0453 131.051 88.0453C129.907 88.0453 128.803 88.0841 127.698 88.1617V86.9981H127.58ZM141.308 79.8614C139.927 76.5257 138.862 74.0434 138.113 72.3756L134.917 79.8614H141.308ZM147.462 70.3975L147.502 70.3587C149.356 70.4362 151.052 70.475 152.551 70.5138C153.301 70.5138 155.037 70.5138 157.68 70.4363V71.5611C155.983 71.6386 155.155 72.1816 155.155 73.1125C155.155 73.6943 155.786 75.4785 157.127 78.4263C157.995 80.3268 158.863 82.2273 159.731 84.1279C160.638 82.2273 161.585 80.3268 162.532 78.4263C163.913 75.5561 164.583 73.7719 164.583 73.0737C164.583 72.4531 164.307 72.0653 163.716 71.8326C163.045 71.755 162.571 71.6774 162.256 71.6386V70.3587C163.518 70.475 164.781 70.5138 166.082 70.5138C166.99 70.5138 168.331 70.5138 170.146 70.4363V71.6386C169.081 71.6774 168.292 71.8714 167.818 72.1429C167.424 72.4144 166.99 72.9574 166.516 73.8495L158.824 88.5107H157.877L150.697 73.3064C150.382 72.6471 149.987 72.1816 149.474 71.9877C149.08 71.8326 148.449 71.7162 147.462 71.6386V70.3975ZM172.197 70.5138H189.121L191.685 75.1294L190.778 75.4785C188.687 73.6943 187.543 72.7247 187.306 72.5695C186.32 72.0265 184.703 71.7162 182.533 71.7162H179.022V78.4263H181.823C183.006 78.4263 183.874 78.1548 184.466 77.6505C184.86 77.2627 185.294 76.5257 185.649 75.5173H186.715V82.5764H185.492C185.294 81.568 185.018 80.8698 184.663 80.4432C184.19 79.9002 183.361 79.6286 182.217 79.6286H178.982V84.6709C178.982 85.563 179.338 86.1836 180.048 86.4939C180.56 86.7266 181.389 86.8429 182.612 86.8429C184.584 86.8429 186.005 86.7654 186.793 86.5714C187.622 86.3775 188.332 85.9508 189.003 85.3303C189.871 84.4382 190.699 83.5461 191.527 82.6152L192.435 82.8867C191.409 85.1363 190.738 86.8429 190.423 88.0065H172.237V86.9593C173.341 86.8041 174.091 86.6102 174.446 86.3387C174.919 85.9896 175.156 85.4078 175.156 84.5545V73.384C175.156 72.2592 174.17 71.6386 172.197 71.4835V70.5138ZM194.723 87.0369C196.735 86.8429 197.76 86.2223 197.76 85.1751V73.6943C197.76 72.3368 196.735 71.6386 194.723 71.6386V70.475C196.774 70.5138 198.313 70.5526 199.338 70.5526C200.561 70.5526 202.416 70.5138 204.901 70.475V71.6386C203.638 71.6774 202.81 71.7938 202.376 71.9877C201.784 72.298 201.508 72.9574 201.508 73.927V84.7873C201.508 85.2915 201.666 85.7569 202.06 86.1448C202.416 86.5714 202.889 86.7654 203.481 86.7654H208.017C210.227 86.7654 212.12 85.1751 213.816 82.0334L215.039 82.3825C214.132 84.5157 213.422 86.4163 212.988 88.0841H194.762V87.0369H194.723Z"
+                  fill="white"
+                ></path>
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M75.4275 23.97L75.8615 47.3195L73.1789 47.6298C71.4037 41.0361 67.9321 35.4508 62.7248 30.9128C57.2807 26.1421 51.1661 23.7761 44.4596 23.7761C35.0312 23.7761 27.4174 27.422 21.6972 34.7527C16.4505 41.424 13.8468 49.5303 13.8468 59.1494C13.8468 69.6217 16.056 78.3099 20.5138 85.1363C25.8 93.2815 33.4532 97.3541 43.5523 97.2765C45.9982 97.2765 48.4835 96.9274 50.9294 96.1905C55.7422 94.7942 58.8982 92.9324 60.4761 90.644C61.9752 88.5495 62.6853 85.02 62.6853 80.0553C62.6853 74.8579 61.9358 71.7162 60.3973 70.6302C59.7661 70.1647 56.5706 69.4278 50.811 68.3806L50.6532 64.9674C57.5569 65.1613 67.8927 65.2777 81.6606 65.2777L81.5422 68.6909H80.5165C75.9404 68.6909 73.6523 71.8326 73.6523 78.0772V91.6912C63.5532 97.8583 52.7046 100.961 41.1459 100.961C29.6661 100.961 19.922 96.8886 11.9927 88.7823C3.9844 80.6759 0 70.9405 0 59.576C0 48.677 4.18165 39.2907 12.5844 31.4558C20.8294 23.7761 30.5734 19.9362 41.7376 19.9362C51.3239 19.9362 61.1073 22.7289 71.0092 28.3529L75.4275 23.97Z"
+                  fill="white"
+                ></path>
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M145.766 2.48233C138.349 5.89555 137.008 15.3982 136.969 20.518L150.894 14.6613L145.805 2.40476C161.822 -4.34409 180.639 3.68471 187.504 20.2078C194.407 36.692 186.872 55.8137 170.856 62.5626L166.082 51.0818L152.393 56.8222C157.64 61.5541 163.794 64.6571 169.83 62.9505C162.611 65.0449 156.378 62.3299 150.5 57.7919L141.703 60.0415L148.567 56.0465C143.912 51.5472 141.86 48.3667 138.507 41.6567L129.394 44.2942L137.837 39.9113C135.864 34.9078 134.681 28.3917 134.72 23.7373C132.116 24.2028 128.369 25.9094 125.726 26.3748C128.29 24.707 132.235 23.078 134.799 21.3714C135.47 12.6832 139.217 5.27496 145.766 2.48233ZM151.841 16.9109L136.969 23.1555C137.166 28.8571 138.862 34.52 140.519 38.9416L157.995 31.6498L151.841 16.9109ZM158.705 33.5115L141.308 40.8034C144.306 47.591 147.462 51.7024 150.658 55.1156L165.175 49.0261L158.705 33.5115ZM146.16 2.2884C153.695 -0.310292 161.112 5.23617 164.741 8.80453L150.894 14.6225L150.776 14.7389L151.683 16.9497L166.556 10.6663C170.461 14.8164 173.262 20.0138 175.235 24.3191L157.916 31.6498L157.956 31.7273H157.798L158.548 33.5115L175.945 26.1421C178.667 33.1237 179.456 38.2823 179.614 43.0142L164.978 49.1813L165.885 51.1982L166.082 51.1206V51.1594L179.614 45.4578C179.259 52.4005 177.207 58.8779 171.881 62.1359L171.921 62.0972C178.272 58.3737 180.679 51.9739 181.626 44.7208L188.845 41.6567C189.121 40.7258 189.318 39.7949 189.476 38.8641L181.783 42.1221C181.783 35.606 180.994 32.154 178.627 25.0173L187.819 21.1386C187.701 20.8283 187.582 20.518 187.464 20.2078C187.306 19.8587 187.148 19.5096 186.991 19.1605L177.838 23.0392C175.629 18.0357 171.921 12.722 168.607 9.4639L176.379 6.16705C175.708 5.66283 174.998 5.19739 174.288 4.77074L166.871 7.87366C160.402 2.32719 152.867 -0.155146 146.437 2.13326C146.358 2.21083 146.239 2.24962 146.16 2.2884ZM158.271 0C176.576 0 191.409 14.5837 191.409 32.5806C191.409 50.5776 176.576 65.1613 158.271 65.1613C139.967 65.1613 125.134 50.5776 125.134 32.5806C125.134 14.5837 140.006 0 158.271 0Z"
+                  fill="white"
+                ></path>
+              </g>
+              <defs>
+                <clipPath id="clip0_127_14">
+                  <rect width="215" height="101" fill="white"></rect>
+                </clipPath>
+              </defs>
+            </svg>
+            <p class="footer-head">Subscribe</p>
+            <p class="footer-body">
+              Enter your email to get notifield about our new solitions
+            </p>
+            <div class="footer-form-input">
+              <input
+                type="email"
+                id="footer-email"
+                class="footer-email"
+                placeholder="   E-mail*"
+              />
+              <button class="arrow-footer" id="arrow-footer">
+                <i class="fa-solid fa-circle-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+          <div class="right-menu">
+            <div class="footer-menus">
+              <a href="#about-section">About</a>
+              <a>Destinations</a>
+              <a href="#contact-us" class="contactus">Contact us</a>
+            </div>
+            <div class="address-menu">
+              <a>Address</a>
+              <p>1A Yusif Safarov str., Baku, AZ 1025, Azerbaijan</p>
+            </div>
+            <div class="phones">
+              <a>
+                <h3>+994 51 877 80 00</h3>
+              </a>
+              <a>
+                <h3>+994 12 408 74 78</h3>
+              </a>
+            </div>
+            <div class="social-icons-footer">
+              <a>
+                <i class="fa-brands fa-whatsapp"></i>
+              </a>
+              <a>
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a>
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="footer-end">
+      <div class="end-texts-foot">
+        <i class="fa-regular fa-copyright"></i>
+        <p>2022 Geo Travel | All rights reserved</p>
+      </div>
+    </div>
+
+   
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+
+      var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        slidesPerView: 4,
+        centeredSlides: false,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+      integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./Js/swiper.min.js"></script>
+    <script src="./Js/geotravel.js"></script>
+  </body>
+</html>
